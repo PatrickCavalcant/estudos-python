@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block corpo %}
+<div> 
+<p><h1>Remover</h1></p>
+<p> <h3>{{ item.titulo }}</h3></p>
+<p>{{ item.data|date:'d/m/Y' }} - {{ item.hora}}</p>
+<p> {{ item.descricao}}</p>
+
+</div>
+<form action="" method="post">
+	{% csrf_token %}
+	
+	<p><button type="submit">Remover</button>ou <a href ="{{ request.META.HTTP_REFERER}}">Cancelar</a></p>
+</form>
+{% endblock %}

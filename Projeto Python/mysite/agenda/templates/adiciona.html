@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block corpo %}
+<form action="" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<p><button type="submit">Adiciona</button>ou <a href ="{{ request.META.HTTP_REFERER}}">Cancelar</a></p>
+</form>
+{% endblock %}
